@@ -1,0 +1,402 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "70 winter walk, USA",
+    "website": "http://google.com",
+    "language": "French-IN",
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:51 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "e6ba8ffbe81b1499238b995f36bd783c",
+    "scope": "APP",
+    "reference": "d46272dbec9d960933b0816912e6c24ad46272dbec9d960933b0816912e6c24a",
+    "id": "d46272dbec9d960933b0816912e6c24a"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=e6ba8ffbe81b1499238b995f36bd783c
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=e6ba8ffbe81b1499238b995f36bd783c
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:54 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 251
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "70 winter walk, USA",
+    "types": "shoe park,shop",
+    "website": "http://google.com",
+    "language": "French-IN"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "Shivtirth",
+    "phone_number": "(+91) 902 356 2396",
+    "address": "Mumbai",
+    "website": "www.shitirth.com",
+    "language": "English-IN",
+    "location": {
+        "lat": 72.452635,
+        "lng": -94.568923
+    },
+    "types": [
+        "Family House",
+        "Banglow"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:54 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "3a060f72dfc15e7033399e293182d31a",
+    "scope": "APP",
+    "reference": "461660e0c84aeeb0134cba1ca24adc88461660e0c84aeeb0134cba1ca24adc88",
+    "id": "461660e0c84aeeb0134cba1ca24adc88"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=3a060f72dfc15e7033399e293182d31a
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=3a060f72dfc15e7033399e293182d31a
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:55 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 236
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "72.452635",
+        "longitude": "-94.568923"
+    },
+    "accuracy": "50",
+    "name": "Shivtirth",
+    "phone_number": "(+91) 902 356 2396",
+    "address": "Mumbai",
+    "types": "Family House,Banglow",
+    "website": "www.shitirth.com",
+    "language": "English-IN"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "Govind Bagh",
+    "phone_number": "(+91) 986 523 5896",
+    "address": "Baramati",
+    "website": "www.govindbagh.com",
+    "language": "French-IN",
+    "location": {
+        "lat": 75.568935,
+        "lng": -89.235648
+    },
+    "types": [
+        "Family House",
+        "Guest House"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:55 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "6368d4056586578b6f9fe7219ceff58f",
+    "scope": "APP",
+    "reference": "b54b46101dd92ed36189c84016f97460b54b46101dd92ed36189c84016f97460",
+    "id": "b54b46101dd92ed36189c84016f97460"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6368d4056586578b6f9fe7219ceff58f
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=6368d4056586578b6f9fe7219ceff58f
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:56 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 245
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "75.568935",
+        "longitude": "-89.235648"
+    },
+    "accuracy": "50",
+    "name": "Govind Bagh",
+    "phone_number": "(+91) 986 523 5896",
+    "address": "Baramati",
+    "types": "Family House,Guest House",
+    "website": "www.govindbagh.com",
+    "language": "French-IN"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "Varsha BGL",
+    "phone_number": "(+91) 856 246 8965",
+    "address": "Mumbai",
+    "website": "www.mhgovt.com",
+    "language": "English-IN",
+    "location": {
+        "lat": 88.782698,
+        "lng": -85.784596
+    },
+    "types": [
+        "CM House",
+        "Govt. House"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:57 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "d17837d9d172210cfc74b3578fd7af0d",
+    "scope": "APP",
+    "reference": "a32c87f812e4f26409ceebce8361807ca32c87f812e4f26409ceebce8361807c",
+    "id": "a32c87f812e4f26409ceebce8361807c"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=d17837d9d172210cfc74b3578fd7af0d
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=d17837d9d172210cfc74b3578fd7af0d
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:58 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 235
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "88.782698",
+        "longitude": "-85.784596"
+    },
+    "accuracy": "50",
+    "name": "Varsha BGL",
+    "phone_number": "(+91) 856 246 8965",
+    "address": "Mumbai",
+    "types": "CM House,Govt. House",
+    "website": "www.mhgovt.com",
+    "language": "English-IN"
+}
+Request method:	PUT
+Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "d17837d9d172210cfc74b3578fd7af0d",
+    "address": "White House, USA",
+    "key": "qaclick123"
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:58 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 38
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "msg": "Address successfully updated"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "d17837d9d172210cfc74b3578fd7af0d"
+}
+HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2022 11:40:59 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
+}
