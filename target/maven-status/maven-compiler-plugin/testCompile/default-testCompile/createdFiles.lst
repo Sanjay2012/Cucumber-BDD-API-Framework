@@ -1,7 +1,0 @@
-stepDefinitions\Hooks.class
-stepDefinitions\LoginSteps.class
-testRunner\TestRunner.class
-resources\TestDataBuild.class
-resources\APIresources.class
-resources\Utils.class
-stepDefinitions\PlaceAPIValidationSteps.class

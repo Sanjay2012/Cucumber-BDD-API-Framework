@@ -1,7 +1,0 @@
-# Manual approch from workspace
-- Workspace loaction
-- choose Build category as "Invoke top level Maven targets"
-- clean test verify
-- clean test verify -Dcucumber.options="--tags=@End2End"
-
-#Parameterise
