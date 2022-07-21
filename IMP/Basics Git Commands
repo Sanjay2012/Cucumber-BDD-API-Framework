@@ -67,3 +67,188 @@ changes and commits, fetch the                       git fetch origin
 latest history from the server and                   git reset --hard origin/master
 point your local master branch at
 it, do this:
+
+======================================
+
+************How To Git Reset to HEAD*****************
+
+When working on a team project, it is quite common for developers to create branches, add files and stage them for commits when they are ready.
+
+However, in some cases, you might realize that the changes that you made were not that good.
+
+You modified some files, added and deleted a lot of lines from your files, but you want to go back.
+
+In short, you want to revert the changes that you just made and go back to the files that you had.
+
+This technique is called “reset to HEAD” and it is quite a powerful tool for developers to use.
+
+
+
+# Git Hard Reset to HEAD
+When resetting files on Git, you essentially have two options : you can either hard reset files or soft reset files.
+
+In this section, we are going to describe how you can hard reset files on Git.
+
+To hard reset files to HEAD on Git, use the “git reset” command with the “–hard” option and specify the HEAD.
+
+$ git reset --hard HEAD       (going back to HEAD)
+$ git reset --hard HEAD^      (going back to the commit before HEAD)
+$ git reset --hard HEAD~1     (equivalent to "^")
+$ git reset --hard HEAD~2     (going back two commits before HEAD)
+
+
+The purpose of the “git reset” command is to move the current HEAD to the commit specified (in this case, the HEAD itself, one commit before HEAD and so on).
+
+So what is the “–hard” option used for?
+The “–hard” option is used in order to reset the files of the index (or the staging area) and of the working directory.
+Using “–hard”, you will be left with the untracked files of your working directory.
+=======================================================
+#Hard Reset Examples
+In order to understand the “hard reset” use cases, let’s have some quick examples.
+
+When trying to reset files, the first command that you want to launch is the “git log” command.
+
+Using the “git log” command, you will be able to have a global understanding of your current Git branch and its commits.
+
+$ git log --oneline --graph
+
+* 802a2ab (HEAD -> feature, origin/feature) feature commit
+* 7a9ad7f (origin/master, master) version 2 commit
+* 98a14be Version 2 commit
+* 53a7dcf Version 1.0 commit
+* 0a9e448 added files
+* bd6903f first commit
+As you can see in the example, the “feature” branch is one commit ahead of the HEAD of the master branch.
+
+
+=================================================================
+In order to hard reset to the commit right before HEAD, use “git reset” with the “–hard” option and specify HEAD^.
+
+$ git reset --hard HEAD^
+
+HEAD is now at 7a9ad7f version 2 commit
+As you can see, the HEAD of the release branch is now pointing to the second commit : we essentially have reset to the commit before HEAD.
+
+$ git log --oneline --graph
+
+* 7a9ad7f (HEAD -> feature, origin/master, master) version 2 commit
+* 98a14be Version 2 commit
+* 53a7dcf Version 1.0 commit
+* 0a9e448 added files
+* bd6903f first commit
+
+============================================
+## Undoing hard reset to HEAD
+Using the last section, you successfully moved the HEAD of your feature branch to one commit before HEAD.
+
+But what if you undo your changes, meaning going back one commit after HEAD?
+
+
+To undo a hard reset on Git, use the “git reset” command with the “–hard” option and specify “HEAD@{1}”
+
+$ git reset --hard HEAD@{1}
+Using the example that we used before, that would give us the following output
+
+$ git reset --hard HEAD@{1}
+
+HEAD is now at 802a2ab feature commit
+
+$ git log --oneline --graph
+
+* 802a2ab (HEAD -> feature, origin/feature) feature commit
+* 7a9ad7f (origin/master, master) version 2 commit
+* 98a14be Version 2 commit
+* 53a7dcf Version 1.0 commit
+* 0a9e448 added files
+* bd6903f first commit
+Note : you might not be able to undo your changes if you reset your commits quite a long time ago.
+
+In fact, Git uses a garbage collector that ensures that the local repository is optimized.
+
+=======================
+
+#### Git Soft Reset to HEAD############
+
+To soft reset files to HEAD on Git, use the “git reset” command with the “–soft” option and specify the HEAD.
+
+$ git reset --soft HEAD       (going back to HEAD)
+$ git reset --soft HEAD^      (going back to the commit before HEAD)
+$ git reset --soft HEAD~1     (equivalent to "^")
+$ git reset --soft HEAD~2     (going back two commits before HEAD)
+
+Contrary to the hard reset, the soft reset won’t alter the working directory and the index.
+
+As a consequence, the changes done between the original HEAD and the current HEAD will be staged.
+
+
+Back to the example we took before, let’s have a quick look at the “feature” branch.
+
+$ git log --oneline --graph
+
+* 802a2ab (HEAD -> feature, origin/feature) feature commit
+* 7a9ad7f (origin/master, master) version 2 commit
+* 98a14be Version 2 commit
+* 53a7dcf Version 1.0 commit
+* 0a9e448 added files
+* bd6903f first commit
+In order to move the HEAD to one commit before, use the “git reset” command with the “–soft” option and specify “HEAD^”
+
+$ git reset --soft HEAD^             (or HEAD~1)
+This time, the staging area will be filled with the changes done between the commit 7a9ad7f and the commit 802a2ab.
+
+Let’s have a look at the changes using the “git status” command.
+
+$ git status
+
+On branch feature
+Your branch is behind 'origin/feature' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   file-feature
+Combining commits using soft reset
+One popular usage of the soft reset command is to combine many different commits into a single one.
+
+On your current branch, let’s have a look at all the commits currently done.
+
+$ git log --oneline --graph
+
+* af2653a (HEAD -> feature) Commit 3
+* 2b9606a Commit 2
+* 6f41547 Commit 1
+* 87c800f Original commit
+In order to combine the last three commits, let’s move the HEAD using the “git reset” command with the “–soft” option.
+
+$ git reset --soft HEAD~3
+
+$ git status
+
+On branch feature
+Your branch is behind 'origin/feature' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   a.txt
+        new file:   b.txt
+        new file:   c.txt
+Now that commits are rollbacked, let’s commit the files using the “git commit” command.
+
+$ git commit -m "Combining commits using git reset"
+
+$ git log --oneline --graph
+
+* 391172d (HEAD -> feature) Combining commits using git reset
+* 87c800f Original commit
+Great!
+
+Your commits are now combined in a single commit.
+=======================================================
+###Conclusion####
+In this tutorial, you learnt how you can easily reset your files to HEAD on Git using the “git reset” command.
+
+We also described the difference between hard reset and soft reset : 
+essentially discarding (hard) or keeping them in your staging area in order to re-commit them later on (soft)
